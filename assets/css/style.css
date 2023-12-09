@@ -1,0 +1,505 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+}
+
+.text-white {
+  color: aliceblue !important;
+}
+
+.clear {
+  clear: both;
+}
+#main {
+  position: relative;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  height: 46.5px;
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  overflow: hidden; 
+}
+
+#nav,
+.subnav,
+li {
+  list-style-type: none;
+}
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+}
+
+#nav > li > a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+#nav li a {
+  text-decoration: none;
+  line-height: 46.5px;
+  padding: 0 24px;
+  display: block;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+  color: black;
+  background-color: #ccc;
+}
+
+#nav .subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#nav .subnav li a {
+  font-size: 15px;
+  color: black;
+  text-align: left;
+  padding: 0 16px;
+  line-height: 38.5px;
+}
+
+#nav > li > a > .icon-down {
+  font-size: 12px;
+}
+
+#nav,
+.subnav {
+  display: inline-block;
+}
+
+header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+#header .icon-search,
+#header .mobile-menu-btn {
+  color: white;
+  /* float: right; */
+  line-height: 46.5px;
+  padding: 0 24px;
+  font-weight: 1000;
+  
+}
+
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+#header .icon-search:hover {
+  background-color: #f44336;
+  cursor: pointer;
+} 
+
+#slider {
+  position: relative;
+  margin-top: 46.5px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: 0;
+  /* kich thuoc co chieu c
+  ao bang 1 nua chieu rong */
+  padding-top: 50%;
+  background: url("/w3_TheBand/assets/image/slider/slider1.jpg") top center /
+    cover no-repeat;
+}
+
+#slider .text-content {
+  color: aliceblue;
+  text-align: center;
+  /* font-weight: 400; */
+  position: absolute;
+  bottom: 47px;
+  width: 100%;
+}
+
+#slider .text-heading {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+#slider .text-description {
+  margin: 15px 0;
+}
+#content {
+}
+
+#content .content-section {
+  width: 800px;
+  max-width: 100%;
+  padding: 64px 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+  text-align: center;
+}
+
+#content .section-heading {
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+#content .section-sub-heading {
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.5;
+  padding-top: 25px;
+}
+
+#content .about-text {
+  padding-top: 25px;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+#content .member-list {
+  padding-top: 47px;
+  overflow: hidden;
+}
+
+#content .member-item {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+}
+
+#content .member-img {
+  width: 153.59px;
+  height: 153.59px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.tour-section {
+  background-color: black;
+}
+
+#content .ticket-list {
+  background-color: aliceblue;
+  margin-top: 40px;
+}
+
+.ticket-list li {
+  color: #757575;
+  font-size: 15px;
+  padding: 11px 16px;
+  border-bottom: 1px solid #ddd;
+}
+.ticket-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 4px;
+}
+
+.ticket-list .quality {
+  margin-left: 16px;
+  float: right;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+}
+
+.place-list {
+  padding: 32px 8px;
+  margin: 0 -16px;
+}
+
+.place-item {
+  float: left;
+  width: 33.3333%;
+  padding: 0 8px 16px 8px;
+  /* background-color: #fff; */
+}
+
+.place-img {
+  width: 100%;
+  display: block;
+}
+
+.place-body {
+  box-sizing: border-box;
+  float: inline-end;
+  float: inline-start;
+  float: ;
+  background-color: #fff;
+  color: #000;
+  font-size: 15px;
+  padding: 0.15px 16px;
+  line-height: 1.5;
+  display: table;
+}
+
+.place-heading {
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.place-time {
+  opacity: 0.6;
+  margin: 15px 0;
+}
+
+.place-dec {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.place-ticket-btn {
+  margin-bottom: 16px;
+  background-color: black;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.place-ticket-btn:hover {
+  background-color: rgb(204, 204, 204);
+  color: black;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  width: 900px;
+  min-height: 200px;
+  background-color: #fff;
+  animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+  background: #009688;
+  height: 129px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.modal-header .icon-bag {
+  margin-right: 16px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 12px;
+}
+
+.modal-close:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin: 15px;
+  padding: 16px 0;
+}
+
+.modal-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.modal-input {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+
+#buy-ticket {
+  width: 100%;
+  padding: 16px;
+  background-color: #009688;
+  border: none;
+  color: #fff;
+}
+
+#buy-ticket:hover {
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+.modal-footer {
+  float: right;
+  padding-right: 16px;
+  margin: 15px 0;
+}
+
+.modal-footer a {
+  color: rgb(33, 150, 243);
+}
+
+.content-section .row-contact-content {
+  padding: 47px 0 32px 0;
+}
+.location,
+.call-number,
+.email {
+  font-size: 20px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  font-weight: 700;
+}
+
+.row-contact-content p {
+  font-size: 16px;
+  padding: 2px 0;
+}
+
+.col-contact-content {
+  display: inline-block;
+}
+
+.col-contact-content .form {
+  float: right;
+  padding-left: 8px;
+}
+
+#name-form,
+#email-form {
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  padding: 8px;
+}
+
+#message-form {
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  padding: 8px;
+  width: 421px;
+}
+
+.row-form {
+  padding-bottom: 8px;
+}
+
+.contact-form {
+  padding-left: 16px;
+}
+
+.send-button {
+  font-size: 15px;
+  padding: 8px 16px;
+  float: right;
+  color: #fff;
+  background-color: #000;
+  margin: 8px 0;
+  border: none;
+}
+
+.send-button:hover {
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+
+.map-section {
+  margin: 64px 0;
+}
+.map-section img {
+  width: 100%;
+}
+
+#footer {
+  margin-bottom: 64px;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+
+#footer .inf,
+#footer .inf a {
+  font-size: 15px;
+}
+
+#footer .social-list > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

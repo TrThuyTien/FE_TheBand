@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
 
     <link
       rel="stylesheet"
@@ -34,9 +34,11 @@
             </ul>
           </li>
         </ul>
+        <div class="search-btn">
+          <i class="icon-search ti-search"></i>
+        </div>
         <!-- Begin: Search button  -->
-        <i class="icon-search ti-search"></i>
-        <i id="mobile-menu" class="mobile-menu-btn ti-menu"></i>
+        <!-- <i id="mobile-menu" class="mobile-menu-btn ti-menu"></i> -->
       </div>
 
       <!-- 2. Slider  -->
@@ -51,7 +53,6 @@
 
       <!-- 3. Content -->
       <div id="content">
-        <!-- About section -->
         <div id="band" class="content-section">
           <h2 class="section-heading">THE BAND</h2>
           <p class="section-sub-heading">We love music</p>
@@ -94,20 +95,20 @@
               />
             </div>
           </div>
-        </div>
+        </div> 
         <!-- Tour section -->
-        <div id="tour" class="tour-section">
+         <div id="tour" class="tour-section">
           <div class="content-section">
             <h2 class="section-heading text-white">TOUR DATES</h2>
             <p class="section-sub-heading text-white">
               Remember to book your tickers!
-            </p>
+            </p> 
             <!-- Tickets  -->
-            <ul class="ticket-list">
+             <ul class="ticket-list">
               <li>September <span class="sold-out">Sold out</span></li>
               <li>October <span class="sold-out">Sold-out</span></li>
               <li>November <span class="quality">3</span></li>
-            </ul>
+            </ul> 
             <!-- Place  -->
             <div class="place-list">
               <div class="place-item">
@@ -256,60 +257,6 @@
         </footer>
       </div>
     </div>
-    <!-- js BuyTicket  -->
-    <script>
-      const buyBtns = document.querySelectorAll(".js-buy-ticket");
-      const modal = document.querySelector(".js-modal");
-      const modalClose = document.querySelector(".js-modal-close");
-      const modalContainer = document.querySelector(".js-modal-container");
-      // Ham hien thi modal mua ve (them class open cua modal)
-      function showBuyTickets() {
-        modal.classList.add("open");
-      }
-      // Ham an modal mua ve (go bo class open cua modal)
-      function hideBuyTickets() {
-        modal.classList.remove("open");
-      }
-      // Lap qua tung the button va lang nghe hanh vi
-      for (const buyBtn of buyBtns) {
-        buyBtn.addEventListener("click", showBuyTickets);
-      }
-      // Nghe hanh vi khi click vao close butten
-      modalClose.addEventListener("click", hideBuyTickets);
-      modal.addEventListener("click", hideBuyTickets);
-      modalContainer.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
-    </script>
-    // Mobile
-    <script>
-      var header = document.getElementById("header");
-      var mobileMenu = document.getElementById("mobile-menu");
-      var headerHeight = header.clientHeight;
-      // console.log(mobile-menu);
-      mobileMenu.onclick = function () {
-        var isClose = header.clientHeight === headerHeight;
-        if (isClose) {
-          header.style.height = "auto";
-        } else {
-          header.style.height = null;
-        }
-      };
-      // Tu dong dong menu
-      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-      // console.log(menuItems);
-      for (var i = 0; i < menuItems.length; i++) {
-        var menuItem = menuItems[i];
-        //console.log(menuItem);
-        menuItem.onclick = function () {
-          var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-          if (isParentMenu) {
-            event.preventDefault();
-          } else {
-            header.style.height = null;
-          }
-        }
-      }
-    </script>
+    
   </body>
 </html>
